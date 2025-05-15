@@ -48,7 +48,7 @@ export default class Bot extends User {
                 const m = moves[0];
                 this.moveSpielstein(m[0], m[1], m[2], false); // gehe einen Schritt
                 this.doMoves(moves.slice(1), dann);
-            }, 0)
+            }, 2500)
         }
     }
 }
