@@ -1,0 +1,29 @@
+<h1>Backgammon</h1>
+<table>
+    <tr>
+        <td>
+          <select title="Spielertyp für Spieler 1" [(ngModel)]="this.spieler1Typ">
+              @for (player of this.spielerTypen; track player) {
+                  <option [value]="player">{{ player }}</option>
+              }
+          </select>
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="spieler1" placeholder="Player 1 Name">
+        </td>
+        <td>
+            vs.
+        <td>
+          <select title="Spielertyp für Spieler 2" [(ngModel)]="this.spieler2Typ">
+              @for (player of this.spielerTypen; track player) {
+                  <option [value]="player">{{ player }}</option>
+              }
+          </select>
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="spieler2" placeholder="Player 2 Name">
+        </td>
+    </tr>
+</table>
+
+<button (click)="startGame()">Spiel starten</button>

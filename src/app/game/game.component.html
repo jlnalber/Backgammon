@@ -1,0 +1,8 @@
+<canvas #canvas></canvas>
+<div>
+  @if (this.gameService.game && this.gameService.game.activeUser) {
+    <p>Spieler am Zug: {{ this.gameService.game.activeUser.name }}</p>
+    <p>Gewürfelte Zahlen: {{ this.gameService.game.activeUser.activeD1 }}, {{ this.gameService.game.activeUser.activeD2 }}</p>
+    <p>Noch übrige Zahlen: {{ this.gameService.game.activeUser.currentDice.join(', ') }}</p>
+  }
+</div>
